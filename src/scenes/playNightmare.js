@@ -30,6 +30,7 @@ class PlayNightmare extends Phaser.Scene {
         this.load.image('unMute', './assets/sprites/unMute.png');
         this.load.image('modeBt', './assets/sprites/modeBt.png');
         this.load.image('play', './assets/sprites/play.png');
+        this.load.image('border', './assets/sprites/border.png');
         this.load.spritesheet('explosion', './assets/sprites/explosion.png', {frameWidth: 32, frameHeight: 32});
         this.load.image('nmleftSide', './assets/sprites/nmleftSide.png');
         this.load.image('nmrightSide', './assets/sprites/nmrightSide.png');
@@ -73,6 +74,8 @@ class PlayNightmare extends Phaser.Scene {
         // find center of screen
         this.screenCenterX = this.cameras.main.worldView.x + this.cameras.main.width / 2;
         this.screenCenterY = this.cameras.main.worldView.y + this.cameras.main.height / 2;
+        this.add.image(this.screenCenterX , this.screenCenterY ,'border').setOrigin(0.5);
+
 
         // mute flag
         this.isMute = false;

@@ -27,6 +27,7 @@ class PlayEasy extends Phaser.Scene {
         this.load.image('modeBt', './assets/sprites/modeBt.png');
         this.load.image('lives', './assets/sprites/lives.png');
         this.load.image('gameOverBg', './assets/sprites/gameOverBG.png');
+        this.load.image('border', './assets/sprites/border.png');
         this.load.audio("bgm", "./assets/SFX/soundtrack.wav");
         this.load.audio("hit", "./assets/SFX/hit.wav");
         this.load.spritesheet('explosion', './assets/sprites/explosion.png', {frameWidth: 32, frameHeight: 32});
@@ -90,6 +91,8 @@ class PlayEasy extends Phaser.Scene {
         this.pauseButton.on('pointerdown', () => {
             this.pauseUnpause();
         });
+
+        this.add.image(this.screenCenterX , this.screenCenterY ,'border').setOrigin(0.5);
 
         // adding switch mode button
         this.modeButton = this.add.image(64, 247,'modeBt').setOrigin(0.5);

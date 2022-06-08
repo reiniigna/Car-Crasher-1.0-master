@@ -6,7 +6,7 @@ class Difficulties extends Phaser.Scene {
     preload() {
         this.load.audio("hit", "./assets/SFX/hit.wav");
         this.load.image('back', './assets/sprites/back.png');
-
+        this.load.image('border', './assets/sprites/border.png');
     }
 
     create() {
@@ -31,6 +31,8 @@ class Difficulties extends Phaser.Scene {
         // find center of screen
         this.screenCenterX = this.cameras.main.worldView.x + this.cameras.main.width / 2;
         this.screenCenterY = this.cameras.main.worldView.y + this.cameras.main.height / 2;
+        this.add.image(this.screenCenterX , this.screenCenterY ,'border').setOrigin(0.5);
+
         this.hitSound = this.sound.add("hit");
         let hitConfig = {
             volume:0.04}

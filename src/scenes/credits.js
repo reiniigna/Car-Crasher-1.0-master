@@ -3,6 +3,10 @@ class Credits extends Phaser.Scene {
         super("creditsScene");
     }
 
+    preload() {
+        this.load.image('border', './assets/sprites/border.png');
+    }
+
     create() {
         let textConfig = {
             fontFamily: 'Arcade',
@@ -14,6 +18,8 @@ class Credits extends Phaser.Scene {
 
         this.screenCenterX = this.cameras.main.worldView.x + this.cameras.main.width / 2;
         this.screenCenterY = this.cameras.main.worldView.y + this.cameras.main.height / 2;
+
+        this.add.image(this.screenCenterX , this.screenCenterY ,'border').setOrigin(0.5);
 
         this.credits = this.add.text(this.screenCenterX, this.screenCenterY - 250, 'CREDITS', textConfig).setOrigin(0.5);
 
