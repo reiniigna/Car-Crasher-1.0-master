@@ -5,6 +5,8 @@ class Difficulties extends Phaser.Scene {
 
     preload() {
         this.load.audio("hit", "./assets/SFX/hit.wav");
+        this.load.image('back', './assets/sprites/back.png');
+
     }
 
     create() {
@@ -87,7 +89,7 @@ class Difficulties extends Phaser.Scene {
             this.hitSound.play(hitConfig);
         })
 
-        this.backButton = this.add.text(this.screenCenterX - 400, this.screenCenterY + 310, '↩️',textConfig).setOrigin(0.5);
+        this.backButton = this.add.image(this.screenCenterX - 400, this.screenCenterY + 310, 'back').setOrigin(0.5);
         this.backButton.setInteractive();
         this.backButton.on('pointerdown', () => {
             this.scene.start('menuScene');
