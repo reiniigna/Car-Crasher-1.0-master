@@ -101,8 +101,10 @@ class PlayNightmare extends Phaser.Scene {
         this.modeButton = this.add.image(64, 247,'modeBt').setOrigin(0.5);
         this.modeButton.setInteractive();
         this.modeButton.on('pointerdown', () => {
-            this.scene.start('menuScene');
+            this.scene.start('difficultiesScene');
             this.bgMusic.pause();
+            this.registry.destroy(); // destroy registry
+            this.events.off();       // disable all active events
         });  
 
         // adding mute function

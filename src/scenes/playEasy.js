@@ -95,7 +95,7 @@ class PlayEasy extends Phaser.Scene {
         this.modeButton = this.add.image(64, 247,'modeBt').setOrigin(0.5);
         this.modeButton.setInteractive();
         this.modeButton.on('pointerdown', () => {
-            this.scene.start('menuScene');
+            this.scene.start('difficultiesScene');
             this.bgMusic.pause();
         });   
         
