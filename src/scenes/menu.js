@@ -15,7 +15,7 @@ class Menu extends Phaser.Scene {
             fontFamily: 'Arcade',
             fontSize: '130px',
             //backgroundColor: '#F3B141',
-            color: '#cf1d6a',
+            color: '#fb0800',
             align: 'right',
             }
         
