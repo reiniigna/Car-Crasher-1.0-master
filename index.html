@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Game</title>
+    <link rel="preload" as="font" href="./assets/fonts/Arcade.ttf" type="font/ttf" crossorigin="anonymous"/>
+    <style>
+        @font-face {
+            font-family: Arcade;
+            src: url('./assets/fonts/Arcade.ttf');
+        }
+
+        body {
+            background-image: url('https://github.com/amirmadethis/Car-Crasher-1.0/blob/master/assets/bg.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <script src="./lib/phaser.js"></script>
+    <script src="./src/prefabs/playerCar.js"></script>
+    <script src="./src/prefabs/obstacleCars.js"></script>
+    <script src="./src/scenes/menu.js"></script>
+    <script src="./src/scenes/credits.js"></script>
+    <script src="./src/scenes/difficulties.js"></script>
+    <script src="./src/scenes/playEasy.js"></script>
+    <script src="./src/scenes/playNormal.js"></script>
+    <script src="./src/scenes/playHard.js"></script>
+    <script src="./src/scenes/playNightmare.js"></script>
+    <script src="./src/main.js" ></script>
+</body>
+</html>
